@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .todo-container {
+            margin-top: 100px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+        .list-group-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .edit-button {
+            margin-left: 10px;
+            background-color: blue;
+            border: 2px solid blue;
+            color: white;
+        }
+        .delete-btn{
+            margin-left: 40px ;
+            background-color: red;
+            border: 2px solid red;
+            color: white;
+        }
+       
+    </style>
+</head>
+<body>
+
+
+<div class="todo-container">
+    <h2 class="text-center">My To-Do List</h2>
+        <div class="input-group">
+            <input type="text" class="form-control" id="todoInput" placeholder="Add a new task" required>
+            <div class="input-group-append px-2 ">
+                <button class="btn btn-success border border-black " onclick="Todo()" >Add</button>
+                <button class="btn btn-danger border border-black " onclick="DeleteAll()">Delete All</button>
+
+            </div>
+        </div>
+    
+    <ul class="list-group align-items-center row-gap-3 " id="todoList">
+        <!-- To-Do items will be appended here -->
+    </ul>
+</div>
+
+<script src="App.js"></script>
+
+</body>
+</html>
+
+
